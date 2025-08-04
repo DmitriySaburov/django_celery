@@ -31,6 +31,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # созданные
+    "main_app",
 ]
 
 MIDDLEWARE = [
@@ -73,6 +75,8 @@ DATABASES = {
     }
 }
 
+
+AUTH_USER_MODEL = 'main_app.User'
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators

@@ -14,6 +14,8 @@ app = Celery(
 app.config_from_object("django.conf:settings")
 
 app.autodiscover_tasks()
+
+# переодическая отправка писем
 app.conf.beat_schedule = {
     "send-report-every-single-minute": {
         "task": "publish.tasks.send_view_count_report",
